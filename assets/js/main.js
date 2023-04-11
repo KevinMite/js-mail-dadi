@@ -15,7 +15,8 @@
 // 4. torniamo a scrivere in italiano
 // 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
-
+// *****************************************************************************************************
+// MAIL
 function controlloEmail(){
     let inputValue = document.getElementById('inputEmail').value
 
@@ -39,6 +40,26 @@ function controlloEmail(){
     }else{
         document.writeln("L'email che hai scritto NON è presente, REGISTRATI")
 
+    }
+
+}
+// ******************************************************************************************************
+// DADI
+function randomNumber(max,min){
+    return Math.floor( Math.random() * max ) + min
+
+}
+
+function gioca(){
+    let cpu = randomNumber(6,1)
+    let persona = randomNumber(6,1)
+
+    if( cpu > persona){
+        document.writeln('la cpu ha vinto')
+    }else if(persona > cpu){
+        document.writeln('la persona ha vinto')
+    }else{
+        document.writeln('pareggio')
     }
 
 }
